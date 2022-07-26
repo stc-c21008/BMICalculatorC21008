@@ -48,7 +48,6 @@ public class MainActivity extends AppCompatActivity {
             float hight = hight_cm / 100;
             float BMI = weight / (hight * hight);
             float appweight = 22 * (hight * hight);
-            String strapp = String.format("%.1f", appweight);
 
             int id = view.getId();
             switch (id) {
@@ -79,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
                                     in_judge.setTextColor(Color.BLACK);
                                 }
                             } else if (old < 2) {
-                                appweight = 16 * (hight * hight);
+                                appweight = (float)16.5 * (hight * hight);
                                 if (BMI < 14.5) {
                                     in_judge.setText("痩せすぎ");
                                     in_judge.setTextColor(Color.YELLOW);
@@ -115,7 +114,7 @@ public class MainActivity extends AppCompatActivity {
                                     in_judge.setTextColor(Color.BLACK);
                                 }
                             } else if (old < 4) {
-                                appweight = 15 * (hight * hight);
+                                appweight = (float)15.5 * (hight * hight);
                                 if (BMI < 13.5) {
                                     in_judge.setText("痩せすぎ");
                                     in_judge.setTextColor(Color.YELLOW);
@@ -133,7 +132,7 @@ public class MainActivity extends AppCompatActivity {
                                     in_judge.setTextColor(Color.BLACK);
                                 }
                             } else if (old < 5) {
-                                appweight = 15 * (hight * hight);
+                                appweight = (float)15.5 * (hight * hight);
                                 if (BMI < 13) {
                                     in_judge.setText("痩せすぎ");
                                     in_judge.setTextColor(Color.YELLOW);
@@ -151,7 +150,7 @@ public class MainActivity extends AppCompatActivity {
                                     in_judge.setTextColor(Color.BLACK);
                                 }
                             } else if (old < 6) {
-                                appweight = 16 * (hight * hight);
+                                appweight = (float)15.5 * (hight * hight);
                                 if (BMI < 13) {
                                     in_judge.setText("痩せすぎ");
                                     in_judge.setTextColor(Color.YELLOW);
@@ -171,7 +170,7 @@ public class MainActivity extends AppCompatActivity {
                             }
                         } else {
                             BMI = weight / (hight * hight * hight) * 10;
-                            appweight = 130 * (hight * hight * hight) * 10;
+                            appweight = 130 * (hight * hight * hight) / 10;
                             if (BMI < 100) {
                                 in_judge.setText("痩せすぎ");
                                 in_judge.setTextColor(Color.YELLOW);
@@ -210,6 +209,7 @@ public class MainActivity extends AppCompatActivity {
                             in_judge.setTextColor(Color.BLACK);
                         }
                     }
+                    String strapp = String.format("%.1f", appweight);
                     in_app.setText(strapp);
                     break;
 
