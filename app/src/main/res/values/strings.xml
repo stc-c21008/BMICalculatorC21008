@@ -15,6 +15,6 @@
     <string name="bt_clear">クリア</string>
     <string name="dia_title">警告</string>
     <string name="dia_mes">適切な肥満度を求めるためには、6歳未満の場合はカウプ指数で、
-        6歳以上15歳までの場合はローレル指数が使われます。本アプリはBMIのみに対応しています。</string>
+        6歳以上15歳までの場合はローレル指数が使われます。本アプリは全てに対応しています。</string>
     <string name="dia_btn">確認</string>
 </resources>

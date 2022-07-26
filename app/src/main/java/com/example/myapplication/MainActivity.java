@@ -2,6 +2,7 @@ package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -52,25 +53,163 @@ public class MainActivity extends AppCompatActivity {
             int id = view.getId();
             switch (id) {
                 case R.id.btCalculate:  //計算
-                    if (old < 16) {
-                        OrderConfirmDialogFragment dialogFragment = new OrderConfirmDialogFragment();
-                        dialogFragment.show(getSupportFragmentManager(), "OrderConfirmDialogFragmen");
-                    }
                     res_1.setText("あなたの肥満度は");
                     res_2.setText("あなたの適正体重は");
                     kg.setText("Kg");
-                    if (BMI < 18.5)
-                        in_judge.setText("低体重");
-                    else if (BMI < 25)
-                        in_judge.setText("普通体重");
-                    else if (BMI < 30)
-                        in_judge.setText("肥満（１度）");
-                    else if (BMI < 35)
-                        in_judge.setText("肥満（２度）");
-                    else if (BMI < 40)
-                        in_judge.setText("肥満（３度）");
-                    else
-                        in_judge.setText("肥満（４度）");
+                    if (old < 16) {
+                        OrderConfirmDialogFragment dialogFragment = new OrderConfirmDialogFragment();
+                        dialogFragment.show(getSupportFragmentManager(), "OrderConfirmDialogFragmen");
+                        if (old < 6) {
+                            if (old < 1) {
+                                appweight = 17 * (hight * hight);
+                                if (BMI < 14) {
+                                    in_judge.setText("痩せすぎ");
+                                    in_judge.setTextColor(Color.YELLOW);
+                                } else if (BMI < 16) {
+                                    in_judge.setText("痩せ気味");
+                                    in_judge.setTextColor(Color.GREEN);
+                                } else if (BMI < 18) {
+                                    in_judge.setText("普通体重");
+                                    in_judge.setTextColor(Color.BLUE);
+                                } else if (BMI < 20) {
+                                    in_judge.setText("太り気味");
+                                    in_judge.setTextColor(Color.RED);
+                                } else {
+                                    in_judge.setText("太りすぎ");
+                                    in_judge.setTextColor(Color.BLACK);
+                                }
+                            } else if (old < 2) {
+                                appweight = 16 * (hight * hight);
+                                if (BMI < 14.5) {
+                                    in_judge.setText("痩せすぎ");
+                                    in_judge.setTextColor(Color.YELLOW);
+                                } else if (BMI < 15.5) {
+                                    in_judge.setText("痩せ気味");
+                                    in_judge.setTextColor(Color.GREEN);
+                                } else if (BMI < 17.5) {
+                                    in_judge.setText("普通体重");
+                                    in_judge.setTextColor(Color.BLUE);
+                                } else if (BMI < 19.5) {
+                                    in_judge.setText("太り気味");
+                                    in_judge.setTextColor(Color.RED);
+                                } else {
+                                    in_judge.setText("太りすぎ");
+                                    in_judge.setTextColor(Color.BLACK);
+                                }
+                            } else if (old < 3) {
+                                appweight = 16 * (hight * hight);
+                                if (BMI < 13) {
+                                    in_judge.setText("痩せすぎ");
+                                    in_judge.setTextColor(Color.YELLOW);
+                                } else if (BMI < 15) {
+                                    in_judge.setText("痩せ気味");
+                                    in_judge.setTextColor(Color.GREEN);
+                                } else if (BMI < 17) {
+                                    in_judge.setText("普通体重");
+                                    in_judge.setTextColor(Color.BLUE);
+                                } else if (BMI < 18) {
+                                    in_judge.setText("太り気味");
+                                    in_judge.setTextColor(Color.RED);
+                                } else {
+                                    in_judge.setText("太りすぎ");
+                                    in_judge.setTextColor(Color.BLACK);
+                                }
+                            } else if (old < 4) {
+                                appweight = 15 * (hight * hight);
+                                if (BMI < 13.5) {
+                                    in_judge.setText("痩せすぎ");
+                                    in_judge.setTextColor(Color.YELLOW);
+                                } else if (BMI < 14.5) {
+                                    in_judge.setText("痩せ気味");
+                                    in_judge.setTextColor(Color.GREEN);
+                                } else if (BMI < 16.5) {
+                                    in_judge.setText("普通体重");
+                                    in_judge.setTextColor(Color.BLUE);
+                                } else if (BMI < 18.5) {
+                                    in_judge.setText("太り気味");
+                                    in_judge.setTextColor(Color.RED);
+                                } else {
+                                    in_judge.setText("太りすぎ");
+                                    in_judge.setTextColor(Color.BLACK);
+                                }
+                            } else if (old < 5) {
+                                appweight = 15 * (hight * hight);
+                                if (BMI < 13) {
+                                    in_judge.setText("痩せすぎ");
+                                    in_judge.setTextColor(Color.YELLOW);
+                                } else if (BMI < 14.5) {
+                                    in_judge.setText("痩せ気味");
+                                    in_judge.setTextColor(Color.GREEN);
+                                } else if (BMI < 16.5) {
+                                    in_judge.setText("普通体重");
+                                    in_judge.setTextColor(Color.BLUE);
+                                } else if (BMI < 18) {
+                                    in_judge.setText("太り気味");
+                                    in_judge.setTextColor(Color.RED);
+                                } else {
+                                    in_judge.setText("太りすぎ");
+                                    in_judge.setTextColor(Color.BLACK);
+                                }
+                            } else if (old < 6) {
+                                appweight = 16 * (hight * hight);
+                                if (BMI < 13) {
+                                    in_judge.setText("痩せすぎ");
+                                    in_judge.setTextColor(Color.YELLOW);
+                                } else if (BMI < 14.5) {
+                                    in_judge.setText("痩せ気味");
+                                    in_judge.setTextColor(Color.GREEN);
+                                } else if (BMI < 16.5) {
+                                    in_judge.setText("普通体重");
+                                    in_judge.setTextColor(Color.BLUE);
+                                } else if (BMI < 18.5) {
+                                    in_judge.setText("太り気味");
+                                    in_judge.setTextColor(Color.RED);
+                                } else {
+                                    in_judge.setText("太りすぎ");
+                                    in_judge.setTextColor(Color.BLACK);
+                                }
+                            }
+                        } else {
+                            BMI = weight / (hight * hight * hight) * 10;
+                            appweight = 130 * (hight * hight * hight) * 10;
+                            if (BMI < 100) {
+                                in_judge.setText("痩せすぎ");
+                                in_judge.setTextColor(Color.YELLOW);
+                            } else if (BMI < 115) {
+                                in_judge.setText("痩せ気味");
+                                in_judge.setTextColor(Color.GREEN);
+                            } else if (BMI < 145) {
+                                in_judge.setText("普通体重");
+                                in_judge.setTextColor(Color.BLUE);
+                            } else if (BMI < 160) {
+                                in_judge.setText("太り気味");
+                                in_judge.setTextColor(Color.RED);
+                            } else {
+                                in_judge.setText("太りすぎ");
+                                in_judge.setTextColor(Color.BLACK);
+                            }
+                        }
+                    } else {
+                        if (BMI < 18.5) {
+                            in_judge.setText("低体重");
+                            in_judge.setTextColor(Color.CYAN);
+                        } else if (BMI < 25) {
+                            in_judge.setText("普通体重");
+                            in_judge.setTextColor(Color.YELLOW);
+                        } else if (BMI < 30) {
+                            in_judge.setText("肥満（１度）");
+                            in_judge.setTextColor(Color.GREEN);
+                        } else if (BMI < 35) {
+                            in_judge.setText("肥満（２度）");
+                            in_judge.setTextColor(Color.BLUE);
+                        } else if (BMI < 40) {
+                            in_judge.setText("肥満（３度）");
+                            in_judge.setTextColor(Color.RED);
+                        } else {
+                            in_judge.setText("肥満（４度）");
+                            in_judge.setTextColor(Color.BLACK);
+                        }
+                    }
                     in_app.setText(strapp);
                     break;
 
